@@ -25,7 +25,7 @@ const functions = require("firebase-functions")
 const next = require("next")
 
 var dev = process.env.NODE_ENV !== "production"
-var app = next({ dev, conf: { distDir: "out" } })
+var app = next({ dev, conf: { distDir: "next" } })
 var handle = app.getRequestHandler()
 
 exports.app = functions.https.onRequest((req, res) => {
